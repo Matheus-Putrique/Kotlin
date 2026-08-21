@@ -6,7 +6,9 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -39,7 +41,7 @@ class MainActivity : ComponentActivity() {
             MeuTheme {
                 Scaffold(){
                     Surface(Modifier.padding(it)){
-                        Formulario()
+                        Trabalho()
                     }
                 }
             }
@@ -140,3 +142,43 @@ fun Formulario(){
         }
     }
 }
+@Composable
+fun Trabalho(){
+    Surface(
+        modifier = Modifier.fillMaxSize(),
+        color = Color(0, 0, 0)
+    ) {
+        Column() {
+            Text("Título")
+
+            Surface(
+                shape = RoundedCornerShape(40.dp),
+                color = Color(255, 255, 255)
+
+            ) {
+                Column() {
+                    Row(){
+                        Button(onClick = {}) {
+                            Text("Botão 1")
+                        }
+                        Button(onClick = {}){
+                            Text("Botão 2")
+
+                        }
+                    }
+                    Row(){
+                        Button(onClick = {}) {
+                            Text("Botão 3")
+                        }
+                        Button(onClick = {}){
+                            Text("Botão 4")
+
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
